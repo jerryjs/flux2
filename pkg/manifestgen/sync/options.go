@@ -46,6 +46,6 @@ func MakeDefaultOptions() Options {
 		Secret:            "flux-system",
 		ManifestFile:      "gotk-sync.yaml",
 		TargetPath:        "",
-		GitImplementation: "",
+		GitImplementation: "libgit2",
 	}
 }

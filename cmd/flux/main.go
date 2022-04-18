@@ -35,7 +35,7 @@ import (
 	"github.com/fluxcd/flux2/pkg/manifestgen/install"
 )
 
-var VERSION = "0.0.0-dev.0"
+var VERSION = "0.28.5"
 
 var rootCmd = &cobra.Command{
 	Use:           "flux",

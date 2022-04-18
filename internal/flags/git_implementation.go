@@ -25,12 +25,12 @@ import (
 	"github.com/fluxcd/flux2/internal/utils"
 )
 
-var supportedGitImplementations = []string{sourcev1.GoGitImplementation, sourcev1.LibGit2Implementation}
+var supportedGitImplementations = []string{sourcev1.LibGit2Implementation}
 
 type GitImplementation string
 
 func (i *GitImplementation) String() string {
-	return string(*i)
+	return "libgit2"
 }
 
 func (i *GitImplementation) Set(str string) error {
@@ -42,7 +42,7 @@ func (i *GitImplementation) Set(str string) error {
 			str, strings.Join(supportedGitImplementations, ", "))
 
 	}
-	*i = GitImplementation(str)
+	*i = GitImplementation("libgit2")
 	return nil
 }
 
